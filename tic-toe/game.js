@@ -114,24 +114,26 @@ function Tile(x, y) {
 			_ctx.fillRect(0, 0, 100, 100);
 
 			_ctx.beginPath();
-			_ctx.arc(50, 50, 30, 0, 2*Math.PI);
-			_ctx.stroke();
+			//_ctx.arc(50, 50, 30, 0, 2*Math.PI);
+			//_ctx.stroke();
 
 			Tile.NOUGHT = new Image();
-			Tile.NOUGHT.src = _c.toDataURL();
+			Tile.NOUGHT.src = "images/Sanders-Head-Shot.png"
+			//_c.toDataURL();
 
 			// Cross
 			_ctx.fillRect(0, 0, 100, 100);
 
 			_ctx.beginPath();
-			_ctx.moveTo(20, 20);
-			_ctx.lineTo(80, 80);
-			_ctx.moveTo(80, 20);
-			_ctx.lineTo(20, 80);
-			_ctx.stroke();
+			//_ctx.moveTo(20, 20);
+			//_ctx.lineTo(80, 80);
+			//_ctx.moveTo(80, 20);
+			//_ctx.lineTo(20, 80);
+			//_ctx.stroke();
 
 			Tile.CROSS = new Image();
-			Tile.CROSS.src = _c.toDataURL();
+			Tile.CROSS.src = "images/trump_head.jpg"
+			//_c.toDataURL();
 		})();
 		tile = Tile.BLANK;
 	}

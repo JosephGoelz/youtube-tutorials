@@ -15,16 +15,10 @@ function MenuState(name) {
 		state.get("game").init(TWO_PLAYER);
 		state.change("game");
 	}));
-	btns.push(new MenuButton("About", 20, _yPos+140, function() {
-		state.change("about", true);
-	}));
-	btns.push(new MenuButton("More Games", 20, _yPos+210, function() {
-		window.open("https://github.com/maxwihlborg/youtube-tutorials");
-	}));
 
 	this.update = function() {
 		frames++;
-		angle = 0.2*Math.cos(frames*0.02);
+		angle = 0.1*Math.cos(frames*0.02);
 	}
 
 	this.render = function(_ctx) {
@@ -35,7 +29,7 @@ function MenuState(name) {
 		ctx.rotate(angle);
 		ctx.font = "40px Helvetica";
 		ctx.fillStyle = "skyblue";
-		var txt = "Tic Tac Toe";
+		var txt = "Presidential Tac-Toe";
 		ctx.fillText(txt, -ctx.measureText(txt).width/2, 18);
 		ctx.restore();
 
@@ -136,11 +130,11 @@ function GameState(name) {
 
 			if (winner && !aiMoved) {
 				if (winner === true) {
-					winnerMsg = "The game was a draw!";
+					winnerMsg = "The state was a draw!";
 				} else if (winner === Tile.NOUGHT) {
-					winnerMsg = "The Nought player won!";
+					winnerMsg = "Sanders takes the state!";
 				} else {
-					winnerMsg = "The Cross player won!";
+					winnerMsg = "Trump takes the state!";
 				}
 			}
 
